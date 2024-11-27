@@ -1,0 +1,30 @@
+services:
+  pg-admin:
+    image: dpage/pgadmin4
+    container_name: pg-admin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "brunownog05@gmail.com"
+      PGADMIN_DEFAULT_PASSWORD: "root"
+    ports:
+      - "6969:80"
+    networks:
+      - mrp_net
+
+  api:
+    build: .
+    container_name: mrp_backend
+    ports:
+      - "8080:8080"
+    environment:
+      URL_DB: ${URL_DATABASE}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+    env_file:
+      - .env
+    networks:
+      - mrp_net
+
+
+networks:
+  mrp_net:
+    driver: bridge
