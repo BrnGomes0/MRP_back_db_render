@@ -13,7 +13,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://mrp-back-db-render.onrender.com")
 @RestController
 @RequestMapping("/inventory")
 public class InventoryController {
