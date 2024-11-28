@@ -17,7 +17,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.List;
 
-@CrossOrigin(origins = "https://mrp-back-db-render.onrender.com")
+@CrossOrigin(origins = "https://posautomation.vercel.app/")
 @RestController
 @RequestMapping("/purchaseOrder")
 public class PurchaseOrderController {

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "https://mrp-back-db-render.onrender.com")
+@CrossOrigin(origins = "https://posautomation.vercel.app/")
 @RestController
 @RequestMapping("/inforecord")
 public class InforecordController {
