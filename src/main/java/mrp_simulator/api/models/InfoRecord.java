@@ -26,4 +26,8 @@ public class InfoRecord {
     private BigDecimal price;
     private Integer leadTime;
 
+    @OneToOne
+    @JoinColumn(name = "material_id")
+    private Material material;
+
 }

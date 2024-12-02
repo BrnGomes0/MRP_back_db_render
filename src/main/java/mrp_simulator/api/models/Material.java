@@ -25,6 +25,9 @@ public class Material {
     private String username;
 
 
+    @OneToOne(mappedBy = "material")
+    private InfoRecord infoRecord;
+
     public Material(DTORegisterItem registerItem){
         this.materialCode = registerItem.materialCode();
         this.demand = registerItem.demand();

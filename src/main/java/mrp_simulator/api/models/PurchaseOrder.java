@@ -32,7 +32,7 @@ public class PurchaseOrder {
     private Material material;
 
     @ManyToMany(mappedBy = "relatedPurchaseOrders")
-    private List<Inventory> inventories = new ArrayList<>();
+    List<Inventory> inventories = new ArrayList<>();
 
     public void addInventory(Inventory inventory) {
         inventories.add(inventory);
