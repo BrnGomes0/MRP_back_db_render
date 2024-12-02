@@ -12,4 +12,7 @@ import java.util.Optional;
 public interface PurchaseOrderRepository extends JpaRepository<PurchaseOrder, Long> {
     boolean existsByInventoriesContainingAndWeekAndMaterial_Username(Inventory Inventory, Integer week, String username);
     Optional<PurchaseOrder> findFirstByMaterialOrderByWeekDesc(Material material);
+    void deleteByMaterial(Material material);
+
+
 }

@@ -14,4 +14,5 @@ public interface InventoryRepository extends JpaRepository<Inventory, Long>{
     List<Inventory> findByMaterialUsername(String username);
     Optional<Inventory> findFirstByMaterial_Username(String username);
     Optional<Inventory> findFirstByMaterialOrderByWeekDesc(Material material);
+    void deleteByMaterial(Material material);
 }
