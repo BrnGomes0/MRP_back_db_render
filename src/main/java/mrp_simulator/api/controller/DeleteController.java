@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/delete")
+@CrossOrigin(origins = "https://posautomation.vercel.app")
 public class DeleteController {
 
     @Autowired
