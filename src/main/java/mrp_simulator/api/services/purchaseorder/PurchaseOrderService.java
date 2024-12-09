@@ -88,7 +88,7 @@ public class PurchaseOrderService {
 
         int initialInventory = originalInventory.getFinalInventory();
         int finalInventory = initialInventory - dtoUpdatePurchasingOrder.demand() + dtoUpdatePurchasingOrder.orderReceived();
-        int orderPlaced = material.getSafetyStock() - finalInventory;
+        int orderPlaced = Math.max(0, material.getSafetyStock() - finalInventory + material.getSafetyStock());
 
         Inventory newInventory = new Inventory();
         newInventory.setMaterialName(originalInventory.getMaterialName());
